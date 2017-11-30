@@ -53,7 +53,7 @@
 
         </div>
 
-        <a href='/logout'>Logout</a>
+        <p  class="text-center"><a class="text-center btn btn-default" style="text-decoration: none" href='/logout'>Logout</a></p>
     </div>
 
 

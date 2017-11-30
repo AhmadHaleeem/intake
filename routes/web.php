@@ -30,7 +30,7 @@ Route::post('/storeEval', 'EvaluationController@storeEval');
 Route::post('jeBedrijf/store', 'EvaluationController@storeEval');
 Route::post("Ontwerp/store", 'OntwerpsController@storeOntwerp');
 Route::post("Inhoud/store", 'InhoudsController@storeInhoud');
-Route::post("techniek/store", 'technieksController@storeTechniek');
+Route::post("techniek/store", 'TechnieksController@storeTechniek');
 Route::post("hosting/store", 'HostingsController@storeHosting');
 
 // Admin Routes

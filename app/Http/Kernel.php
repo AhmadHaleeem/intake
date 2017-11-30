@@ -61,6 +61,6 @@ class Kernel extends HttpKernel
         'hostingRequest'  => \App\Http\Middleware\hostingRequest::class,
         'inhoudRequest'  => \App\Http\Middleware\inhoudRequest::class,
         'ontwerpRequest'  => \App\Http\Middleware\ontwerpRequest::class,
-        'techniekRequest'  => \App\Http\Middleware\techniekRequest::class,
+
     ];
 }

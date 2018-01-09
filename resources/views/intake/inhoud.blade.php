@@ -5,13 +5,13 @@
 @section('content')
 
     <div class="container">
-        <div class="row upper">
+        <div class="row upper" style="margin-bottom: 40px">
             <div class="content">
                 <div class="col-md-3 theHeader">
-                    <h1 class="nameOfCompany" class="text-center">BEELDR</h1>
+                    <img style="max-width: 150px;margin-top: 145px;margin-left: -15px;" src="images/beeldr-logo-zwart.png">
                 </div>
                 <div class="col-md-3 theHeaderRight" >
-                    <h1 class="nameOfCompany1 " class="text-center">Inhoud</h1>
+                    <h1 class="nameOfCompany1 "  class="text-center">Inhoud</h1>
                 </div>
             </div>
             <div class="col-md-9 times">
@@ -36,7 +36,7 @@
                 <div class="hosting ball"></div>
             </div>
         </div>
-    </div>
+
 
     @if ($errors->any())
         {{--@foreach ($errors->all() as $error)--}}
@@ -46,10 +46,11 @@
         </div>
         {{--@endforeach--}}
     @endif
-    <form action="Inhoud/store" method="post">
+    </div>
+    <form style="margin-top: 60px" action="Inhoud/store" method="post">
         {{ csrf_field() }}
         <div  class="col-md-12 inhoud">
-            <h2>Inhoud</h2>
+            {{--<h2 style="font-size: 28px">Inhoud</h2>--}}
             <div style="margin-top: 50px " class="head1">
                 <div class="head">
                     <span class="toggle-info pull-left"><i class="fa fa-minus"></i></span>Heb je al teksten voor de website geschreven, wil je advies hierover of wellicht een tekstschrijver inhuren?
@@ -60,7 +61,7 @@
                     <div class="leftRadio"><input class="radio-btn" type="radio" name="a" value="Ja"> Ja</div>
                     <div class="rightRadio"><input class="radio-btn" type="radio" name="a" value="Nee"> Nee</div>
                     <div style="display: none" class="form-group open">
-                        <label for="comment">Write Here:</label>
+                       
                         <textarea  class="form-control" rows="2" id="comment" name="advices"></textarea>
                     </div>
                 </div>
@@ -74,10 +75,10 @@
 
                 <div class="panel-body akkord">
 
-                    <div class="leftRadio"><input class="radio-btn" type="radio" value="Ja"> Ja</div>
-                    <div class="rightRadio"><input class="radio-btn" type="radio" value="Nee"> Nee</div>
+                    <div class="leftRadio"><input class="radio-btn" type="radio" name="a" value="Ja"> Ja</div>
+                    <div class="rightRadio"><input class="radio-btn" type="radio" name="a" value="Nee"> Nee</div>
                     <div style="display: none" class="form-group open">
-                        <label for="comment">Write Here:</label>
+                       
                         <textarea  class="form-control" rows="2" id="comment" name="newRegular"></textarea>
                     </div>
                 </div>
@@ -93,7 +94,7 @@
                     <div class="leftRadio"><input class="radio-btn" type="radio" name="allChecked" value="Ja"> Ja</div>
                     <div class="rightRadio"><input class="radio-btn" type="radio" name="allChecked" value="Nee"> Nee</div>
                     <div style="display: none" class="form-group open">
-                        <label for="comment">Write Here:</label>
+                       
                         <textarea  class="form-control" rows="2" id="comment" name="socialMedia"></textarea>
                     </div>
                 </div>
@@ -109,7 +110,7 @@
                     <div class="leftRadio"><input class="radio-btn" type="radio" name="allChecked" value="Ja"> Ja</div>
                     <div class="rightRadio"><input class="radio-btn" type="radio" name="allChecked" value="Nee"> Nee</div>
                     <div style="display: none" class="form-group open">
-                        <label for="comment">Write Here:</label>
+                       
                         <textarea  class="form-control" rows="2" id="comment" name="pages"></textarea>
                     </div>
                 </div>
@@ -125,7 +126,7 @@
                     <div class="leftRadio"><input class="radio-btn" type="radio" name="allChecked" value="Ja"> Ja</div>
                     <div class="rightRadio"><input class="radio-btn" type="radio" name="allChecked" value="Nee"> Nee</div>
                     <div style="display: none" class="form-group open">
-                        <label for="comment">Write Here:</label>
+                       
                         <textarea  class="form-control" rows="2" id="comment" name="moreLanguages"></textarea>
                     </div>
                 </div>
@@ -142,7 +143,7 @@
                     <div class="leftRadio"><input class="radio-btn" type="radio" name="allChecked" value="Ja"> Ja</div>
                     <div class="rightRadio"><input class="radio-btn" type="radio" name="allChecked" value="Nee"> Nee</div>
                     <div style="display: none" class="form-group open">
-                        <label for="comment">Write Here:</label>
+                       
                         <textarea  class="form-control" rows="2" id="comment" name="seoSearch"></textarea>
                     </div>
                 </div>
@@ -179,8 +180,8 @@
                     <div class="checkbox">
                         <label><input type="checkbox" name="functions[]" value="Inschrijfformulier">Inschrijfformulier voor v.b. symposium</label>
                     </div>
-                    <div class="checkbox ">
-                        <label class="anders"><input type="checkbox" >Anders:</label>
+                    <div  class="checkbox ">
+                        <label style="margin-bottom: 13px" class="anders"><input type="checkbox" >Anders:</label>
                     </div>
                     <textarea style="display: none;margin-top: 10px;width: 310px;height: 44px;"  class="form-control open_anders" rows="2" id="comment" name="anders"></textarea>
                 </div>
@@ -263,7 +264,7 @@
         <div class="col-md-6 col-md-offset-5">
             <section class="jump">
 
-                <a href="/ontwerp"  style="color: #fff;background: #000; padding: 7px; width: 110px; border: none; font-size: 19px;" href= "#" class="btn btn-default text-center"> < vorige </a>
+                <a href="/ontwerp"  style="color: #fff;background: #000; padding: 7px; width: 110px; border: none; font-size: 14px;" href= "#" class="btn btn-default text-center"> < vorige </a>
                 <a href="/techniek" class="btn"> <input type="submit" style="color: #fff;background: #000; padding: 7px; width: 110px; border: none" value="volgende >"></a>
             </section>
         </div>

@@ -4,10 +4,10 @@
 
 @section('content')
     <div class="container">
-        <div class="row upper">
+        <div class="row upper" style="margin-bottom: 50px">
             <div class="content">
                 <div class="col-md-3 theHeader">
-                    <h1 class="nameOfCompany" class="text-center">BEELDR</h1>
+                    <img style="max-width: 150px;margin-top: 145px;margin-left: -15px;" src="images/beeldr-logo-zwart.png">
                 </div>
                 <div class="col-md-3 theHeaderRight" >
                     <h1 class="nameOfCompany1 " class="text-center">Techniek</h1>
@@ -35,27 +35,28 @@
                 <div class="hosting ball"></div>
             </div>
         </div>
-    </div>
 
-    @if ($errors->any())
-        {{--@foreach ($errors->all() as $error)--}}
-        <div class="alert alert-danger">
-            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-            <strong>Sommige velden zijn nog leeg!</strong>
-        </div>
-        {{--@endforeach--}}
-    @endif
-    <form action="techniek/store" method="post">
+
+        @if ($errors->any())
+            {{--@foreach ($errors->all() as $error)--}}
+            <div class="alert alert-danger">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                <strong>Sommige velden zijn nog leeg!</strong>
+            </div>
+            {{--@endforeach--}}
+        @endif
+    </div>
+    <form style="margin-top: 50px" action="techniek/store" method="post">
         {{ csrf_field() }}
         <div class="col-md-12">
-        <h2>Techniek</h2>
+        {{--<h2>Techniek</h2>--}}
         <div class="head1">
             <div class="head">
                 <span class="toggle-info pull-left"><i class="fa fa-minus"></i></span>Wil je een emailadres koppelen aan de domeinnam (b.v. info@mijndomeinnaam.nl)?
             </div>
             <div class="panel-body">
                 <div class="form-group">
-                    <label for="comment">Write Here:</label>
+                   
                     <textarea class="form-control" rows="2" id="comment" name="linkTheEmail"></textarea>
                 </div>
                 <hr>
@@ -66,7 +67,7 @@
             </div>
             <div class="panel-body">
                 <div class="form-group">
-                    <label for="comment">Write Here:</label>
+                   
                     <textarea class="form-control" rows="2" id="comment" name="newEmailAddress"></textarea>
                 </div>
                 <hr>
@@ -77,7 +78,7 @@
             </div>
             <div class="panel-body">
                 <div class="form-group">
-                    <label for="comment">Write Here:</label>
+                   
                     <textarea class="form-control" rows="2" id="comment" name="offTheWebsite"></textarea>
                 </div>
                 <hr>
@@ -88,7 +89,7 @@
             </div>
             <div class="panel-body">
                 <div class="form-group">
-                    <label for="comment">Write Here:</label>
+                   
                     <textarea class="form-control" rows="2" id="comment" name="budget"></textarea>
                 </div>
                 <hr>
@@ -123,7 +124,7 @@
             </div>
             <div class="panel-body">
                 <div class="form-group">
-                    <label for="comment">Write Here:</label>
+                   
                     <textarea class="form-control" rows="2" id="comment" name="siteStatistics"></textarea>
                 </div>
                 <hr>
@@ -134,7 +135,7 @@
             </div>
             <div class="panel-body">
                 <div class="form-group">
-                    <label for="comment">Write Here:</label>
+                   
                     <textarea class="form-control" rows="2" id="comment" name="timeOfSuccess"></textarea>
                 </div>
                 <hr>
@@ -146,7 +147,7 @@
     <div class="col-md-6 col-md-offset-5">
         <section class="jump">
 
-            <a href="/inhoud"  style="color: #fff;background: #000; padding: 7px; width: 110px; border: none; font-size: 19px;" href= "#" class="btn btn-default text-center"> < vorige </a>
+            <a href="/inhoud"  style="color: #fff;background: #000; padding: 7px; width: 110px; border: none; font-size: 14px;" href= "#" class="btn btn-default text-center"> < vorige </a>
             <a href="/hosting" class="btn"> <input type="submit" style="color: #fff;background: #000; padding: 7px; width: 110px; border: none" value="volgende >"></a>
         </section>
     </div>

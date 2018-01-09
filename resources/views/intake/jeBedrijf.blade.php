@@ -9,7 +9,7 @@
         <div class="row upper">
             <div class="content">
                 <div class="col-md-3 theHeader">
-                    <h1 class="nameOfCompany" class="text-center">BEELDR</h1>
+                    <img style="max-width: 150px;margin-top: 145px;margin-left: -15px;" src="images/beeldr-logo-zwart.png">
                 </div>
                 <div class="col-md-3 theHeaderRight" >
                     <h1 class="nameOfCompany1 " class="text-center">Je Bedrijf</h1>
@@ -26,6 +26,7 @@
                             <li><a href="#" >hosting</a></li>
                         </ol>
                     </div>
+
                 </div>
             </div>
 
@@ -38,7 +39,7 @@
             </div>
         </div>
     </div>
-    <div class="container">
+    <div class="container" style="margin-top: 50px">
         @if ($errors->any())
             {{--@foreach ($errors->all() as $error)--}}
                 <div class="alert alert-danger">
@@ -49,15 +50,9 @@
         @endif
     </div>
 
-
-
-
-
-
-
     <div class="col-md-12">
         <div class="title">
-            <h1>Vragenlijst voor een nieuwe website!</h1>
+            <h1 style="color: #969696;font-size: 24px;">Vragenlijst voor een nieuwe website!</h1>
             <p class='lead'>Het is tijd voor een nieuwe website! Een goed moment om een aantal dingen onde de loep te nemen. Voordat je bij ons op de boot komt praten, of wij misschien wel bij jou, is het handig om onderstaande vragenlijst door te nemen. Zo komen we razendsnel tot en website met de juiste functionaliteiten, uitstraling en boodschoop.</p>
         </div>
         <form action="jeBedrijf/store" method="post">
@@ -70,7 +65,7 @@
 
                 <div class="panel-body">
                     <div class="form-group">
-                        <label for="comment">Write Here:</label>
+                        
                         <textarea class="form-control products" rows="2" id="comment" name="products"></textarea>
 
                     </div>
@@ -86,7 +81,7 @@
 
                 <div class="panel-body">
                     <div class="form-group">
-                        <label for="comment">Write Here:</label>
+                        
                         <textarea class="form-control" rows="2" id="comment" name="goal"></textarea>
                     </div>
                     <hr>
@@ -101,7 +96,7 @@
 
                 <div class="panel-body">
                     <div class="form-group">
-                        <label for="comment">Write Here:</label>
+                        
                         <textarea class="form-control" rows="2" id="comment" name="competitors"></textarea>
                     </div>
                     <hr>
@@ -116,7 +111,7 @@
 
                 <div class="panel-body">
                     <div class="form-group">
-                        <label for="comment">Write Here:</label>
+                        
                         <textarea class="form-control" rows="2" id="comment" name="makeCompanyBeter"></textarea>
                     </div>
                 </div>
@@ -151,8 +146,8 @@
                         <label><input type="checkbox"  value="Extra informatie versterken" name="goals[]">Extra informatie versterken</label>
                     </div>
                     <div class="checkbox ">
-                        <label class="anders"><input type="checkbox" value="" name="anders">....................</label>
-                        <textarea style="display: none;margin-top: 10px;width: 310px;height: 44px;"  class="form-control open_anders" rows="2" id="comment" name="anders"></textarea>
+                        <label style="margin-bottom: 15px" class="anders"><input type="checkbox" value="" name="anders">....................</label>
+                        <textarea style="display: none;margin-top: 10px;max-width: 610px;height: 44px;"  class="form-control open_anders" rows="2" id="comment" name="anders"></textarea>
 
                     </div>
                 </div>
@@ -167,7 +162,7 @@
 
                 <div class="panel-body">
                     <div class="form-group">
-                        <label for="comment">Write Here:</label>
+                        
                         <textarea class="form-control" rows="2" id="comment" name="reasonMakeWebsite"></textarea>
                     </div>
                     <hr>
@@ -182,7 +177,7 @@
 
                 <div class="panel-body">
                     <div class="form-group">
-                        <label for="comment">Write Here:</label>
+
                         <textarea class="form-control" rows="2" id="comment" name="oldBadWebsites"></textarea>
                     </div>
                     <hr>
@@ -197,7 +192,7 @@
 
                 <div class="panel-body">
                     <div class="form-group">
-                        <label for="comment">Write Here:</label>
+
                         <textarea class="form-control" rows="2" id="comment" name="visitor"></textarea>
                     </div>
                 </div>
@@ -207,7 +202,7 @@
     <hr>
     <div class="col-md-6 col-md-offset-5">
         <section class="jump">
-            <a  style="color: #fff;background: #000; padding: 7px; width: 110px; border: none; font-size: 19px;" href= "#" class="btn btn-default text-center"> < vorige </a>
+            <a  style="color: #fff;background: #000; padding: 7px; width: 110px; border: none; font-size: 14px;" href= "#" class="btn btn-default text-center"> < vorige </a>
            <a href="/ontwerp" class="btn"> <input type="submit" style="color: #fff;background: #000; padding: 7px; width: 110px; border: none" value="volgende >"></a>
 
         </section>

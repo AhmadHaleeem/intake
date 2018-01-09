@@ -10,7 +10,7 @@
         <div class="row upper">
             <div class="content">
                 <div class="col-md-3 theHeader">
-                    <h1 class="nameOfCompany" class="text-center">BEELDR</h1>
+                    <img style="max-width: 150px;margin-top: 145px;margin-left: -15px;" src="images/beeldr-logo-zwart.png">
                 </div>
                 <div class="col-md-3 theHeaderRight" >
                     <h1 class="nameOfCompany1 " class="text-center">Hosting</h1>
@@ -41,7 +41,7 @@
 
 
 
-        <div class="col-md-12 " style="font-size: 19px; color: #5c5c5c;">
+        <div class="col-md-12 " style="font-size: 19px; color: #5c5c5c;margin-top: 70px">
             <span style="font-size: 30px;font-weight: bold;"  class="text-center verzend">Verzend!?</span>
             <h2 style="margin-top: 10px"> Het is gelukt!</h2>
             <p>Bedankt voor het invullen.

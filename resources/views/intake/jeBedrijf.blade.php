@@ -138,7 +138,7 @@
     <div class="col-md-6 col-md-offset-5">
         <section class="jump">
             {{--<a  style="color: #fff;background: #000; padding: 7px; width: 110px; border: none; font-size: 14px;" href= "#" class="btn btn-default text-center"> < vorige </a>--}}
-           <a href="/ontwerp" class="btn"> <input id="register-form"  type="submit" style="color: #fff;background: #000; padding: 7px; width: 110px; border: none" value="volgende >"></a>
+           <a href="" class="btn"> <input id="register-form"  type="submit" style="color: #fff;background: #000; padding: 7px; width: 110px; border: none" value="volgende >"></a>
         </section>
     </div>
 </div>

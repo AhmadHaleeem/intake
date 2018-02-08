@@ -43,11 +43,11 @@
                             <div class="timeline">
                                 <div class="events">
                                     <ol>
-                                        <li><a href="" >je bedrijf<input class="<?php if (Request::path() == 'bedrijf') {echo  Request::path(); } else { echo "eventen";} ?>" type="submit" value=""></a></li>
-                                        <li><a href="" >ontwerp<input class="<?php if (Request::path() == 'ontwerp') {echo  Request::path(); } else { echo "eventen";} ?>" type="submit" value=""></a></li>
-                                        <li><a href="" >inhoud<input class="<?php if (Request::path() == 'inhoud') {echo  Request::path(); } else { echo "eventen";} ?>" type="submit" value=""></a></li>
-                                        <li><a href="" >techniek<input class="<?php if (Request::path() == 'techniek') {echo  Request::path(); } else { echo "eventen";} ?>" type="submit" value=""></a></li>
-                                        <li><a href="" >hosting<input class="<?php if (Request::path() == 'hosting') {echo  Request::path(); } else { echo "eventen";} ?>" type="submit" value=""></a></li>
+                                        <li><a href="/bedrijf" >je bedrijf<div  class="<?php if (Request::path() == 'bedrijf') {echo  Request::path(); } else { echo "eventen";} ?>"  value=""></div></a></li>
+                                        <li><a href="/ontwerp" >ontwerp<div  class="<?php if (Request::path() == 'ontwerp') {echo  Request::path(); } else { echo "eventen";} ?>"  value=""></div></a></li>
+                                        <li><a href="" >inhoud<div  class="<?php if (Request::path() == 'inhoud') {echo  Request::path(); } else { echo "eventen";} ?>"  value=""></div></a></li>
+                                        <li><a href="" >techniek<div  class="<?php if (Request::path() == 'techniek') {echo  Request::path(); } else { echo "eventen";} ?>"  value=""></div></a></li>
+                                        <li><a href="" >hosting<div  class="<?php if (Request::path() == 'hosting') {echo  Request::path(); } else { echo "eventen";} ?>"  value=""></div></a></li>
                                     </ol>
                                  </div>
                             </div>
@@ -63,9 +63,7 @@
                     </div>
 
         <div class="">
-
                 @yield('content')
-
         </div>
 
 

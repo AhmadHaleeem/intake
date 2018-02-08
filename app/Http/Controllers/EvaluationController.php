@@ -58,15 +58,12 @@ class EvaluationController extends Controller
             $evals->oldBadWebsites   = $request->oldBadWebsites;
             $evals->visitor          = $request->visitor;
             $evals->save();
-            return redirect('/ontwerp');
+            if ($evals->count() > 2) {
+                return redirect('/ontwerp');
+            }
+            return redirect('inhoud');
+
     }
 
 
 }
-//            $evals->presentCompany   = $request->presentCompany;
-//            $evals->newCustomers     = $request->newCustomers;
-//            $evals->takeTheTasks     = $request->takeTheTasks;
-//            $evals->revenue          = $request->revenue;
-//            $evals->accessibility    = $request->accessibility;
-//            $evals->imageStrengthen  = $request->imageStrengthen;
-//            $evals->extraInfo        = $request->extraInfo;

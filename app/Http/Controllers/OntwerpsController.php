@@ -13,11 +13,11 @@ class OntwerpsController extends Controller
         $this->middleware('auth');
     }
     public function storeOntwerp(Request $request) {
-        $this->validate($request,  [
-            'apperance'           => 'required',
-            'corporateIdentity'   => 'required',
-
-        ]);
+//        $this->validate($request,  [
+//            'apperance'           => 'required',
+//            'corporateIdentity'   => 'required',
+//
+//        ]);
 
             $ontwerps = new Ontwerps;
             $ontwerps->user_name             = Auth::user()->name;
@@ -31,11 +31,8 @@ class OntwerpsController extends Controller
             $ontwerps->mooiWebsite3          = $request->mooiWebsite3;
 
             $ontwerps->save();
-        if ($request->has('apperance')) {
+
             return redirect('/inhoud');
-        } else {
-            return redirect()->back();
-        }
 
     }
 }

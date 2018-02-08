@@ -14,15 +14,15 @@ class TechnieksController extends Controller
     }
     public function storeTechniek(Request $request) {
 
-        $this->validate($request,  [
-            'linkTheEmail'       => 'required',
-            'newEmailAddress'    => 'required',
-            'offTheWebsite'      => 'required',
-            'budget'             => 'required',
-            'siteStatistics'     => 'required',
-            'timeOfSuccess'      => 'required',
-
-        ]);
+//        $this->validate($request,  [
+//            'linkTheEmail'       => 'required',
+//            'newEmailAddress'    => 'required',
+//            'offTheWebsite'      => 'required',
+//            'budget'             => 'required',
+//            'siteStatistics'     => 'required',
+//            'timeOfSuccess'      => 'required',
+//
+//        ]);
 
         $technieks = new Technieks;
 

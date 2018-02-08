@@ -15,21 +15,29 @@ class InhoudsController extends Controller {
     public function storeInhoud(Request $request)
     {
 
-        $this->validate($request,  [
-            'advices'       => 'required',
-            'newRegular'    => 'required',
-            'socialMedia'   => 'required',
-            'pages'         => 'required',
-            'moreLanguages' => 'required',
-            'seoSearch'     => 'required',
-
-
-        ]);
+//        $this->validate($request,  [
+//            'advices'       => 'required',
+//            'newRegular'    => 'required',
+//            'socialMedia'   => 'required',
+//            'pages'         => 'required',
+//            'moreLanguages' => 'required',
+//            'seoSearch'     => 'required',
+//
+//
+//        ]);
 
 
     $inhouds = new Inhouds;
-    $functionsString = implode(", ", $request->get('functions'));
-    $elemntsString = implode(", ", $request->get('vElement'));
+    if (is_array($request->get('functions'))) {
+        $functionsString = implode(", ", $request->get('functions'));
+        $inhouds->functions      = $functionsString;
+    }
+    if (is_array($request->get('vElement'))) {
+        $elemntsString = implode(", ", $request->get('vElement'));
+        $inhouds->vElement       = $elemntsString;
+    }
+
+
 
 
     $inhouds->user_name      = Auth::user()->name;
@@ -40,8 +48,8 @@ class InhoudsController extends Controller {
     $inhouds->moreLanguages  = $request->moreLanguages;
     $inhouds->seoSearch      = $request->seoSearch;
     $inhouds->anders         = $request->anders;
-    $inhouds->functions      = $functionsString;
-    $inhouds->vElement       = $elemntsString;
+
+
 
     $inhouds->save();
     return redirect('/techniek');

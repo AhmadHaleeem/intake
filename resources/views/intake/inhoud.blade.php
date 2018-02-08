@@ -3,60 +3,26 @@
 
 
 @section('content')
-
     <div class="container">
-        <div class="row upper" style="margin-bottom: 40px">
-            <div class="content">
-                <div class="col-md-3 theHeader">
-                    <img style="max-width: 150px;margin-top: 145px;margin-left: -15px;" src="images/beeldr-logo-zwart.png">
-                </div>
-                <div class="col-md-3 theHeaderRight" >
-                    <h1 class="nameOfCompany1 "  class="text-center">Inhoud</h1>
-                </div>
-            </div>
-            <div class="col-md-9 times">
-                <div class="timeline">
-                    <div class="events">
-                        <ol>
-                            <li><a href="#" >je bedrijf</a></li>
-                            <li><a href="#" >ontwerp</a></li>
-                            <li><a href="#" >inhoud</a></li>
-                            <li><a href="#" >techniek</a></li>
-                            <li><a href="#" >hosting</a></li>
-                        </ol>
-                    </div>
-                </div>
-            </div>
 
-            <div class="downTheTime">
-                <div class="jeBedrijf ball"></div>
-                <div class="ontwerp ball"></div>
-                <div class="inhoud ball"></div>
-                <div class="techniek ball"></div>
-                <div class="hosting ball"></div>
+        <div class="container">
+            <div class="title">
+                <h2 >Inhoud</h2>
+                <p class='lead'></p>
             </div>
         </div>
 
 
-    @if ($errors->any())
-        {{--@foreach ($errors->all() as $error)--}}
-        <div class="alert alert-danger">
-            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-            <strong>Sommige velden zijn nog leeg!</strong>
-        </div>
-        {{--@endforeach--}}
-    @endif
-    </div>
-    <form style="margin-top: 60px" action="Inhoud/store" method="post">
+    <form style="margin-top: 60px" action="inhoud/store" method="post">
         {{ csrf_field() }}
-        <div  class="col-md-12 inhoud">
+        <div  class="col-md-12 inhoudd">
             {{--<h2 style="font-size: 28px">Inhoud</h2>--}}
-            <div style="margin-top: 50px " class="head1">
+            <div class="head1">
                 <div class="head">
                     <span class="toggle-info pull-left"><i class="fa fa-minus"></i></span>Heb je al teksten voor de website geschreven, wil je advies hierover of wellicht een tekstschrijver inhuren?
                 </div>
 
-                <div class="panel-body akkord">
+                <div class="panel-body akkord inhoud_body">
 
                     <div class="leftRadio"><input class="radio-btn" type="radio" name="a" value="Ja"> Ja</div>
                     <div class="rightRadio"><input class="radio-btn" type="radio" name="a" value="Nee"> Nee</div>
@@ -73,7 +39,7 @@
                     <span class="toggle-info pull-left"><i class="fa fa-minus"></i></span>Heb je regelmatige nieuwe inhoud zoals nieuws of portfolio, of wil je een statische website?
                 </div>
 
-                <div class="panel-body akkord">
+                <div class="panel-body akkord inhoud_body">
 
                     <div class="leftRadio"><input class="radio-btn" type="radio" name="a" value="Ja"> Ja</div>
                     <div class="rightRadio"><input class="radio-btn" type="radio" name="a" value="Nee"> Nee</div>
@@ -89,7 +55,7 @@
                     <span class="toggle-info pull-left"><i class="fa fa-minus"></i></span>Naar welke sociale media websites wil je linken (b.v. Facebook, Instagram, LinkedIn en Twitter)?
                 </div>
 
-                <div class="panel-body akkord">
+                <div class="panel-body akkord inhoud_body">
 
                     <div class="leftRadio"><input class="radio-btn" type="radio" name="allChecked" value="Ja"> Ja</div>
                     <div class="rightRadio"><input class="radio-btn" type="radio" name="allChecked" value="Nee"> Nee</div>
@@ -105,7 +71,7 @@
                     <span class="toggle-info pull-left"><i class="fa fa-minus"></i></span>Welke Pagina's komen er op de nieuwe website (b.v. Home, Over ons, Contact)?
                 </div>
 
-                <div class="panel-body akkord">
+                <div class="panel-body akkord inhoud_body">
 
                     <div class="leftRadio"><input class="radio-btn" type="radio" name="allChecked" value="Ja"> Ja</div>
                     <div class="rightRadio"><input class="radio-btn" type="radio" name="allChecked" value="Nee"> Nee</div>
@@ -121,7 +87,7 @@
                     <span class="toggle-info pull-left"><i class="fa fa-minus"></i></span> Wil je een functie voor meertaligheid?
                 </div>
 
-                <div class="panel-body akkord">
+                <div class="panel-body akkord inhoud_body">
 
                     <div class="leftRadio"><input class="radio-btn" type="radio" name="allChecked" value="Ja"> Ja</div>
                     <div class="rightRadio"><input class="radio-btn" type="radio" name="allChecked" value="Nee"> Nee</div>
@@ -138,7 +104,7 @@
                     </span>Als je goed gevonden wilt worden zijn de juiste zoektermen belangrijk. Heb je zelf al een lijst met SEO zoektermen?
                 </div>
 
-                <div class="panel-body akkord">
+                <div class="panel-body akkord inhoud_body">
 
                     <div class="leftRadio"><input class="radio-btn" type="radio" name="allChecked" value="Ja"> Ja</div>
                     <div class="rightRadio"><input class="radio-btn" type="radio" name="allChecked" value="Nee"> Nee</div>
@@ -183,7 +149,7 @@
                     <div  class="checkbox ">
                         <label style="margin-bottom: 13px" class="anders"><input type="checkbox" >Anders:</label>
                     </div>
-                    <textarea style="display: none;margin-top: 10px;width: 310px;height: 44px;"  class="form-control open_anders" rows="2" id="comment" name="anders"></textarea>
+                    <textarea style="display: none;margin-top: 10px;max-width: 662px !important;height: 43px !important;"  class="form-control open_anders" rows="2" id="comment" name="anders"></textarea>
                 </div>
                 <div style="margin-top: 70px" class="col-lg-6 col-sm-12 functies">
                     <div class="checkbox">
@@ -265,8 +231,15 @@
             <section class="jump">
 
                 <a href="/ontwerp"  style="color: #fff;background: #000; padding: 7px; width: 110px; border: none; font-size: 14px;" href= "#" class="btn btn-default text-center"> < vorige </a>
-                <a href="/techniek" class="btn"> <input type="submit" style="color: #fff;background: #000; padding: 7px; width: 110px; border: none" value="volgende >"></a>
+                <a href="" class="btn"> <input id="register-form" type="submit" style="color: #fff;background: #000; padding: 7px; width: 110px; border: none" value="volgende >"></a>
             </section>
+        </div>
+        <div id="error_message" class="error_message">
+            <div class="message">
+                <span>Soomige velden zijn nog leeg!</span>
+                <a style="margin-top: -196px;color: #fff;background: #000; padding: 7px; width: 110px; border: none; font-size: 14px;" href= "#" class="btn btn-default text-center"> < teruuuug! </a>
+                <a style="margin-top: -225px;" href="/techniek" class="btn"> <input  type="submit" style="color: #fff;background: #000; padding: 7px; width: 110px; border: none" value="hop hop! >"></a>
+            </div>
         </div>
     </form>
 

@@ -15,32 +15,35 @@ class EvaluationController extends Controller
 
     public function storeEval(Request $request) {
 
-        $this->validate($request,  [
-            'products'          => 'required',
-            'goal'              => 'required',
-            'competitors'       => 'required',
-            'makeCompanyBeter'  => 'required',
-            'reasonMakeWebsite' => 'required',
-            'oldBadWebsites'    => 'required',
-            'visitor'           => 'required',
-//        ],
-//            [
-//                'products.required' => 'je moet de producten field invullen..',
-////                'goal.required'     => 'je moet de doelen field invullen..',
-////                'competitors.required' => 'je moet de concurrenten field invullen..',
+//        $this->validate($request,  [
+//            'products'          => 'required',
+//            'goal'              => 'required',
+//            'competitors'       => 'required',
+//            'makeCompanyBeter'  => 'required',
+//            'reasonMakeWebsite' => 'required',
+//            'oldBadWebsites'    => 'required',
+//            'visitor'           => 'required',
+////        ],
+////            [
 ////                'products.required' => 'je moet de producten field invullen..',
-////                'products.required' => 'je moet de producten field invullen..',
-////                'products.required' => 'je moet de producten field invullen..',
-////                'products.required' => 'je moet de producten field invullen..',
-            ]);
+//////                'goal.required'     => 'je moet de doelen field invullen..',
+//////                'competitors.required' => 'je moet de concurrenten field invullen..',
+//////                'products.required' => 'je moet de producten field invullen..',
+//////                'products.required' => 'je moet de producten field invullen..',
+//////                'products.required' => 'je moet de producten field invullen..',
+//////                'products.required' => 'je moet de producten field invullen..',
+//            ]);
 
 
 
 
 
             $evals = new Evaluations;
-            $golasOfTheWebsite = implode(", ", $request->get('goals'));
 
+            if ( is_array( $request->get('goals') ) ) {
+                $golasOfTheWebsite = implode(", ", $request->get('goals'));
+                $evals->goalsOfTheWebsite =  $golasOfTheWebsite;
+            }
 
             $evals->user_name        = Auth::user()->name;
             $evals->products         = $request->products;
@@ -48,7 +51,7 @@ class EvaluationController extends Controller
             $evals->competitors      = $request->competitors;
             $evals->makeCompanyBeter = $request->makeCompanyBeter;
 
-            $evals->goalsOfTheWebsite =  $golasOfTheWebsite;
+
 
             $evals->anders           = $request->anders;
             $evals->reasonMakeWebsite = $request->reasonMakeWebsite;

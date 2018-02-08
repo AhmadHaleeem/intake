@@ -13,14 +13,14 @@ class HostingsController extends Controller
         $this->middleware('auth');
     }
     public function storeHosting(Request $request) {
-        $this->validate($request,  [
-            'domainName'        => 'required',
-            'hostingPackage'    => 'required',
-            'websiteSecure'     => 'required',
-            'mailSecure'        => 'required',
-
-
-        ]);
+//        $this->validate($request,  [
+//            'domainName'        => 'required',
+//            'hostingPackage'    => 'required',
+//            'websiteSecure'     => 'required',
+//            'mailSecure'        => 'required',
+//
+//
+//        ]);
         $hostings = new Hostings;
 
         $hostings->user_name          = Auth::user()->name;

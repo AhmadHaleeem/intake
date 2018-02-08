@@ -15,11 +15,11 @@ class CreateHostingsTable extends Migration
     {
         Schema::create('hostings', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('user_name');
-            $table->text('domainName');
-            $table->text('hostingPackage');
-            $table->text('websiteSecure');
-            $table->text('mailSecure');
+            $table->string('user_name')->nullable();
+            $table->text('domainName')->nullable();
+            $table->text('hostingPackage')->nullable();
+            $table->text('websiteSecure')->nullable();
+            $table->text('mailSecure')->nullable();
             $table->timestamps();
         });
     }

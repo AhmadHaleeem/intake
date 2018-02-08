@@ -353,7 +353,7 @@ input[type="Password"] {
     color: #fff;
     position: absolute;
     top: -8px;
-    right: 83px;
+    right: 125px;
     font-size: 14px;
     font-family: "Helvetica Neue";
     font-size: 14px;
@@ -386,7 +386,7 @@ input[type="Password"] {
 .downTheTime .techniek,
 .downTheTime .inhoud {
     position: relative;
-    bottom: 18px;
+    bottom: 15px;
     left: 18px;
     background-color: #000000;
     width: 34px !important;
@@ -412,11 +412,20 @@ input[type="Password"] {
     margin-bottom: 15px;
     margin-top: 10px;
 }
+
 .container textarea {
     margin-top: -11px !important;
     max-width: 667px !important;
     height: 43px ;
     /*resize: none;*/
+    border-radius: 0;
+    background-color: #f4f4f4;
+}
+.bedrijf_section textarea {
+    margin-top: -11px !important;
+    max-width: 667px !important;
+    height: 84px;
+    /* resize: none; */
     border-radius: 0;
     background-color: #f4f4f4;
 }
@@ -771,6 +780,9 @@ a:hover {
 
 
 @media screen and (max-width:410px) {
+    .bedrijf_section {
+        margin-top: -90px;
+    }
     .error_message {
         margin-left: -139px;
     }

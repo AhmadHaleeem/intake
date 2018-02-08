@@ -59,6 +59,7 @@
                                     <th>beeldrOnlineMarketing</th>
                                     <th>siteStatistics</th>
                                     <th>timeOfSuccess</th>
+                                    <th>Date</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -92,6 +93,7 @@
                                         <td>{{ $techniek->beeldrOnlineMarketing }}</td>
                                         <td>{{ $techniek->siteStatistics  }}</td>
                                         <td>{{ $techniek->timeOfSuccess  }}</td>
+                                        <td>{{ $techniek->created_at->diffForHumans() }}</td>
 
 
                                     </tr>
@@ -108,6 +110,7 @@
                                     <th>beeldrOnlineMarketing</th>
                                     <th>siteStatistics</th>
                                     <th>timeOfSuccess</th>
+                                    <th>Date</th>
                                 </tfoot>
                             </table>
 

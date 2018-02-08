@@ -49,48 +49,84 @@
                                 <thead>
                                 <tr>
                                     <th>UserName</th>
-                                    <th>advices</th>
-                                    <th>newRegular</th>
-                                    <th>socialMedia</th>
-                                    <th>pages</th>
-                                    <th>moreLanguages</th>
-                                    <th>seoSearch</th>
-                                    <th>functions</th>
+                                    <th>Advices</th>
+                                    <th>New Regular</th>
+                                    <th>Social Media</th>
+                                    <th>Pages</th>
+                                    <th>More Languages</th>
+                                    <th>Seo Search</th>
+                                    <th>Functions</th>
                                     <th>vElements</th>
+                                    <th>Date</th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 @foreach($inhouds as $inhoud)
 
+                                @php
 
+                                  if ( $inhoud->advices== NULL) {
+                                      $inhoud->advices = 'NULL';
+
+                                 }
+
+                                  if ( $inhoud->newRegular == NULL) {
+                                      $inhoud->newRegular= 'NULL';
+
+                                 }
+                                  if ( $inhoud->socialMedia== NULL) {
+                                      $inhoud->socialMedia = 'NULL';
+
+                                 }
+
+                                  if ( $inhoud->pages == NULL) {
+                                      $inhoud->pages= 'NULL';
+
+                                 }
+                                  if ( $inhoud->moreLanguages== NULL) {
+                                      $inhoud->moreLanguages = 'NULL';
+
+                                 }
+
+                                  if ( $inhoud->seoSearch == NULL) {
+                                      $inhoud->seoSearch= 'NULL';
+
+                                  }
+                                 if ( $inhoud->functions == NULL) {
+                                      $inhoud->functions= 'NULL';
+
+                                  }
+                                 if ( $inhoud->vElement == NULL) {
+                                      $inhoud->vElement= 'NULL';
+                                  }
+                                @endphp
                                     <tr>
-                                        <td>{{ $inhoud->user_name }}</td>
-                                        <td>{{ $inhoud->advices }}</td>
-                                        <td>{{ $inhoud->newRegular }}</td>
-                                        <td> {{ $inhoud->socialMedia  }}</td>
-                                        <td>{{ $inhoud->pages }}</td>
-                                        <td>{{ $inhoud->moreLanguages }}</td>
-                                        <td>{{ $inhoud->seoSearch }}</td>
-                                        <td>{{ $inhoud->functions }}</td>
-                                        <td>{{ $inhoud->vElement }}</td>
-
-
+                                        <td >{{ $inhoud->user_name }}</td>
+                                        <td >{{ $inhoud->advices }}</td>
+                                        <td >{{ $inhoud->newRegular }}</td>
+                                        <td > {{ $inhoud->socialMedia  }}</td>
+                                        <td >{{ $inhoud->pages }}</td>
+                                        <td >{{ $inhoud->moreLanguages }}</td>
+                                        <td >{{ $inhoud->seoSearch }}</td>
+                                        <td >{{ $inhoud->functions }}</td>
+                                        <td >{{ $inhoud->vElement }}</td>
+                                        <td >{{ $inhoud->created_at->diffForHumans() }}</td>
                                     </tr>
                                 @endforeach
                                 </tbody>
                                 <tfoot>
                                     <th>UserName</th>
-                                    <th>advices</th>
-                                    <th>newRegular</th>
-                                    <th>socialMedia</th>
-                                    <th>pages</th>
-                                    <th>moreLanguages</th>
-                                    <th>seoSearch</th>
-                                    <th>functions</th>
+                                    <th>Advices</th>
+                                    <th>New Regular</th>
+                                    <th>Social Media</th>
+                                    <th>Pages</th>
+                                    <th>More Languages</th>
+                                    <th>Seo Search</th>
+                                    <th>Functions</th>
                                     <th>vElements</th>
+                                    <th>Date</th>
                                 </tfoot>
                             </table>
-
                         </div>
                     </div>
                 </div>

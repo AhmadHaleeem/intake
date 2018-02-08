@@ -57,6 +57,7 @@
                                     <th>mooiWebsite1</th>
                                     <th>mooiWebsite2</th>
                                     <th>mooiWebsite3</th>
+                                    <th>Date</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -99,6 +100,7 @@
 
                                         <td>{{ $ontwerp->mooiWebsite2 }}</td>
                                         <td>{{ $ontwerp->mooiWebsite3  }}</td>
+                                        <td>{{ $ontwerp->created_at->diffForHumans()  }}</td>
 
 
                                     </tr>
@@ -114,6 +116,7 @@
                                 <th>mooiWebsite1</th>
                                 <th>mooiWebsite2</th>
                                 <th>mooiWebsite3</th>
+                                <th>Date</th>
                                 </tfoot>
                             </table>
 

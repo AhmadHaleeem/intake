@@ -4,20 +4,7 @@
 
 
 @section('content')
-
-
-    {{--<div class="container bedrijf_container" style="margin-top: 50px">--}}
-        {{--@if ($errors->any())--}}
-            {{--@foreach ($errors->all() as $error)--}}
-                {{--<div class="alert alert-danger">--}}
-                    {{--<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>--}}
-                    {{--<strong>Sommige velden zijn nog leeg!</strong>--}}
-                {{--</div>--}}
-            {{--@endforeach--}}
-        {{--@endif--}}
-    {{--</div>--}}
-
-    <div class="col-md-12" style="font-size: 14px">
+    <div class="col-md-12 bedrijf_section" style="font-size: 14px">
         <div class="title" style="margin-bottom: 20px">
             <h1 class="title_header">Vragenlijst voor een nieuwe website!</h1>
             <p >Het is tijd voor een nieuwe website! Een goed moment om een aantal dingen onde de loep te nemen. Voordat je bij ons op de boot komt praten, of wij misschien wel bij jou, is het handig om onderstaande vragenlijst door te nemen. Zo komen we razendsnel tot en website met de juiste functionaliteiten, uitstraling en boodschoop.</p>
@@ -158,15 +145,11 @@
     <div id="error_message" class="error_message">
         <div class="message">
             <span>Soomige velden zijn nog leeg!</span>
-            <a style="margin-top: -196px;color: #fff;background: #000; padding: 7px; width: 110px; border: none; font-size: 14px;" href= "#" class="btn btn-default text-center"> < teruuuug! </a>
+            <a style="margin-left: 13px;;margin-top: -196px;color: #fff;background: #000; padding: 7px; width: 110px; border: none; font-size: 14px;" href= "#" class="btn btn-default text-center"> < teruuuug! </a>
             <a style="margin-top: -225px;" href="/ontwerp" class="btn"> <input  type="submit" style="color: #fff;background: #000; padding: 7px; width: 110px; border: none" value="hop hop! >"></a>
         </div>
     </div>
 
     </form>
-
-
-
-
 
 @stop

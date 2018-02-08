@@ -50,33 +50,32 @@
                                 <thead>
                                 <tr>
                                     <th>UserName</th>
-                                    <th>domainName</th>
-                                    <th>hostingPackage</th>
-                                    <th>websiteSecure</th>
-                                    <th>mailSecure</th>
+                                    <th>Domain Name</th>
+                                    <th>Hosting Package</th>
+                                    <th>Website Secure</th>
+                                    <th>Mail Secure</th>
+                                    <th>Date</th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 @foreach($hostings as $hosting)
-
-
                                     <tr>
                                         <td>{{ $hosting->user_name }}</td>
                                         <td>{{ $hosting->domainName }}</td>
                                         <td>{{ $hosting->hostingPackage }}</td>
                                         <td> {{ $hosting->websiteSecure  }}</td>
                                         <td>{{ $hosting->mailSecure }}</td>
-
-
+                                        <td>{{ $hosting->created_at->diffForHumans() }}</td>
                                     </tr>
                                 @endforeach
                                 </tbody>
                                 <tfoot>
                                     <th>UserName</th>
-                                    <th>domainName</th>
-                                    <th>hostingPackage</th>
-                                    <th>websiteSecure</th>
-                                    <th>mailSecure</th>
+                                    <th>Domain Name</th>
+                                    <th>Hosting Package</th>
+                                    <th>Website Secure</th>
+                                    <th>Mail Secure</th>
+                                    <th>Date</th>
                                 </tfoot>
                             </table>
 

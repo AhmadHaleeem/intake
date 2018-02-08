@@ -24,7 +24,7 @@
 
                         <div class="content wide_content">
                             <div class="col-md-3 theHeader">
-                                <img style="width: 125px;margin-top: 160px;height: 86px;" src="images/beeldr-logo-zwart.png">
+                                <img style="width: 101px;margin-top: 160px;height: 85px;" src="images/beeldr-logo-zwart.png">
                             </div>
                             <div class="col-md-3 theHeaderRight" >
                                 <span class="header-right">|</span>
@@ -33,7 +33,7 @@
                         </div>
                         <div class="content small_content">
                             <div class="full_header" style="width: 100%;height: 81px;background-color: #000;margin-top: 150px;">
-                                <img style="width: 135px;height: 76px;margin-left: 97px" src="images/beeldr-logo-zwart.png">
+                                <img style="width: 100px;height: 76px;margin-left: 97px" src="images/beeldr-logo-zwart.png">
                                 <span class="header-right">|</span>
                                 <h1 class="nameOfCompany1 " class="text-center">{{ ucfirst(Request::path()) }}</h1>
                             </div>

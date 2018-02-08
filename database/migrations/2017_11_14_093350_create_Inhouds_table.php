@@ -16,12 +16,12 @@ class CreateInhoudsTable extends Migration
         Schema::create('inhouds', function (Blueprint $table) {
             $table->increments('id');
             $table->string('user_name');
-            $table->text('advices');
-            $table->text('newRegular');
-            $table->text('socialMedia');
-            $table->text('pages');
-            $table->text('moreLanguages');
-            $table->text('seoSearch');
+            $table->text('advices')->nullable();
+            $table->text('newRegular')->nullable();
+            $table->text('socialMedia')->nullable();
+            $table->text('pages')->nullable();
+            $table->text('moreLanguages')->nullable();
+            $table->text('seoSearch')->nullable();
             $table->text('anders')->nullable();
             $table->text('functions')->nullable();
             $table->text('vElement')->nullable();

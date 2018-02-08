@@ -16,8 +16,8 @@ class CreateOntwerpsTable extends Migration
         Schema::create('Ontwerps', function (Blueprint $table) {
             $table->increments('id');
             $table->string('user_name');
-            $table->text('apperance');
-            $table->text('corporateIdentity');
+            $table->text('apperance')->nullable();
+            $table->text('corporateIdentity')->nullable();
             $table->text('website1')->nullable();
             $table->text('website2')->nullable();
             $table->text('website3')->nullable();

@@ -16,15 +16,15 @@ class CreateTechnieksTable extends Migration
         Schema::create('technieks', function (Blueprint $table) {
             $table->increments('id');
             $table->string('user_name');
-            $table->text('linkTheEmail');
-            $table->text('newEmailAddress');
-            $table->text('offTheWebsite');
-            $table->text('budget');
+            $table->text('linkTheEmail')->nullable();
+            $table->text('newEmailAddress')->nullable();
+            $table->text('offTheWebsite')->nullable();
+            $table->text('budget')->nullable();
             $table->string('selfDo')->nullable();
             $table->string('beeldrTakesCMS')->nullable();
             $table->string('beeldrOnlineMarketing')->nullable();
-            $table->text('siteStatistics');
-            $table->text('timeOfSuccess');
+            $table->text('siteStatistics')->nullable();
+            $table->text('timeOfSuccess')->nullable();
             $table->timestamps();
         });
     }

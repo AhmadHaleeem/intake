@@ -62,6 +62,7 @@
                                     <th>ReasonMakeWebsite</th>
                                     <th>OldBadWebsites</th>
                                     <th>Visitor</th>
+                                    <th>Date</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -90,6 +91,7 @@
 
                                         <td>{{ $evaluation->oldBadWebsites }}</td>
                                         <td>{{ $evaluation->visitor }}</td>
+                                        <td>{{ $evaluation->created_at->diffForHumans() }}</td>
 
                                     </tr>
                                 @endforeach
@@ -105,6 +107,7 @@
                                     <th>ReasonMakeWebsite</th>
                                     <th>OldBadWebsites</th>
                                     <th>Visitor</th>
+                                    <th>Date</th>
                                 </tfoot>
                             </table>
 

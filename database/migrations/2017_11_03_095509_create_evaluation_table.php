@@ -16,16 +16,16 @@ class CreateEvaluationTable extends Migration
         Schema::create('Evaluations', function(Blueprint $table) {
             $table->increments('id');
             $table->string('user_name');
-            $table->text('products');
-            $table->text('goal');
-            $table->text('competitors');
-            $table->text('makeCompanyBeter');
+            $table->text('products')->nullable();
+            $table->text('goal')->nullable();
+            $table->text('competitors')->nullable();
+            $table->text('makeCompanyBeter')->nullable();
             $table->text('goalsOfTheWebsite')->nullable();
             $table->text('anders')->nullable();
 
-            $table->text('reasonMakeWebsite');
-            $table->text('oldBadWebsites');
-            $table->text('visitor');
+            $table->text('reasonMakeWebsite')->nullable();
+            $table->text('oldBadWebsites')->nullable();
+            $table->text('visitor')->nullable();
             $table->timestamps();
 
         });

@@ -860,3 +860,24 @@ a:hover {
     }
 
 }
+/* Start Message  */
+.error_message .message a.back_button {
+    margin-left: 13px;
+    margin-top: -196px;
+    color: #fff;background: #000;
+    padding: 7px;
+    width: 110px;
+    border: none;
+    font-size: 14px;
+}
+.error_message .message a.continue_button {
+    margin-top: -225px;
+}
+.error_message .message a.continue_button input{
+    color: #fff;
+    background: #000;
+    padding: 7px;
+    width: 110px;
+    border: none
+}
+/* End Message  */

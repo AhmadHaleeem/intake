@@ -34,10 +34,6 @@ class EvaluationController extends Controller
 //////                'products.required' => 'je moet de producten field invullen..',
 //            ]);
 
-
-
-
-
             $evals = new Evaluations;
 
             if ( is_array( $request->get('goals') ) ) {
@@ -50,19 +46,13 @@ class EvaluationController extends Controller
             $evals->goal            = $request->goal;
             $evals->competitors      = $request->competitors;
             $evals->makeCompanyBeter = $request->makeCompanyBeter;
-
-
-
             $evals->anders           = $request->anders;
             $evals->reasonMakeWebsite = $request->reasonMakeWebsite;
             $evals->oldBadWebsites   = $request->oldBadWebsites;
             $evals->visitor          = $request->visitor;
             $evals->save();
-            if ($evals->count() > 2) {
-                return redirect('/ontwerp');
-            }
-            return redirect('inhoud');
 
+            return redirect('/ontwerp');
     }
 
 

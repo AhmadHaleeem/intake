@@ -68,8 +68,8 @@
        <div id="error_message" class="error_message">
            <div class="message">
                <span>Soomige velden zijn nog leeg!</span>
-               <a style="margin-top: -196px;color: #fff;background: #000; padding: 7px; width: 110px; border: none; font-size: 14px;" href= "#" class="btn btn-default text-center"> < teruuuug! </a>
-               <a style="margin-top: -225px;" href="/klaar" class="btn"> <input  type="submit" style="color: #fff;background: #000; padding: 7px; width: 110px; border: none" value="hop hop! >"></a>
+               <a href= "#" class="back_button btn btn-default text-center"> < teruuuug! </a>
+               <a  href="/klaar" class="btn continue_button"> <input  type="submit" style="" value="hop hop! >"></a>
            </div>
        </div>
        </form>

@@ -38,34 +38,34 @@ $(function () {
 
     // start Error Message
     $('div.error_message').css('display', 'none');
-    // $("#register-form").click(function(){
-    //
-    //     var isFormValid = true;
-    //
-    //     $("textarea").each(function(){
-    //         if ($(this).val().length == ''){
-    //             $('body').not($('.error_message')).addClass("overlay");
-    //             isFormValid = false;
-    //         }
-    //         else{
-    //             $('body').removeClass("overlay");
-    //         }
-    //     });
-    //
-    //     if (!isFormValid) {
-    //         $('.error_message').css('display', 'block');
-    //
-    //     }
-    //
-    //     return isFormValid;
-    // });
-    // $(document).ready(function () {
-    //    $('body').click(function () {
-    //
-    //        $('div.error_message').hide(40);
-    //        $('body').removeClass("overlay");
-    //
-    //    });
-    // });
+    $("#register-form").click(function(){
+
+        var isFormValid = true;
+
+        $("textarea").each(function(){
+            if ($(this).val().length == ''){
+                $('body').not($('.error_message')).addClass("overlay");
+                isFormValid = false;
+            }
+            else{
+                $('body').removeClass("overlay");
+            }
+        });
+
+        if (!isFormValid) {
+            $('.error_message').css('display', 'block');
+
+        }
+
+        return isFormValid;
+    });
+    $(document).ready(function () {
+       $('body').click(function () {
+
+           $('div.error_message').hide(40);
+           $('body').removeClass("overlay");
+
+       });
+    });
 });
 

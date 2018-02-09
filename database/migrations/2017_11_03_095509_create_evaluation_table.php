@@ -13,7 +13,7 @@ class CreateEvaluationTable extends Migration
      */
     public function up()
     {
-        Schema::create('Evaluations', function(Blueprint $table) {
+        Schema::create('evaluations', function(Blueprint $table) {
             $table->increments('id');
             $table->string('user_name');
             $table->text('products')->nullable();

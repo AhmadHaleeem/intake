@@ -13,7 +13,7 @@ class CreateOntwerpsTable extends Migration
      */
     public function up()
     {
-        Schema::create('Ontwerps', function (Blueprint $table) {
+        Schema::create('ontwerps', function (Blueprint $table) {
             $table->increments('id');
             $table->string('user_name');
             $table->text('apperance')->nullable();
@@ -35,6 +35,6 @@ class CreateOntwerpsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Ontwerps');
+        Schema::dropIfExists('ontwerps');
     }
 }

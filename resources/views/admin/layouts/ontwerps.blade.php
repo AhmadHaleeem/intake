@@ -15,8 +15,7 @@
                 <small>it all starts here</small>
             </h1>
             <ol class="breadcrumb">
-                <li><a href="#"><i class="fa fa-dashboard"></i> Admin Page</a></li>
-                <li><a href="#">Examples</a></li>
+                <li><a href="/dashboard"><i class="fa fa-dashboard"></i> Admin Page</a></li>
                 <li class="active">Ontwerps</li>
             </ol>
         </section>

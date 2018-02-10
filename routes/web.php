@@ -27,11 +27,11 @@ Route::get('/klaar', 'HomeContrlller@klaar');
 
 
 //Route::post('/storeEval', 'EvaluationController@storeEval');
-Route::post('bedrijf/store', 'EvaluationController@storeEval');
-Route::post("ontwerp/store", 'OntwerpsController@storeOntwerp');
-Route::post("inhoud/store", 'InhoudsController@storeInhoud');
-Route::post("techniek/store", 'TechnieksController@storeTechniek');
-Route::post("hosting/store", 'HostingsController@storeHosting');
+Route::post('/bedrijf/store', 'EvaluationController@storeEval');
+Route::post("/ontwerp/store", 'OntwerpsController@storeOntwerp');
+Route::post("/inhoud/store", 'InhoudsController@storeInhoud');
+Route::post("/techniek/store", 'TechnieksController@storeTechniek');
+Route::post("/hosting/store", 'HostingsController@storeHosting');
 
 // Admin Routes
 Route::get('/user', 'AdminController@index');
@@ -51,3 +51,7 @@ Route::get('/dashboard', 'EvaluationController@index')->middleware('roles');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+
+

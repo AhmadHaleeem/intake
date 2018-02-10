@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 use App\Role;
+use App\Evaluations;
+
+use Illuminate\Support\Facades\Auth;
 
 class HomeContrlller extends Controller
 {
@@ -14,7 +17,15 @@ class HomeContrlller extends Controller
         $this->middleware('auth');
     }
     public function jebedrijf() {
-        return view('intake.jeBedrijf');
+        $id = Auth::user()->id;
+        $eval = Evaluations::where('user_id', $id)->first();
+        if ($eval) {
+            return view('intake.jeBedrijf', compact('eval'));
+        } else {
+            return view('intake.jeBedrijf', compact('eval'));
+        }
+        
+
     }
     public function ontwerp() {
         return view('intake.ontwerp');
@@ -60,3 +71,4 @@ class HomeContrlller extends Controller
 //        return redirect('/bedrijf');
 //    }
 }
+

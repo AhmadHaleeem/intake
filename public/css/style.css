@@ -861,6 +861,9 @@ a:hover {
 
 }
 /* Start Message  */
+div.error_message {
+    display: none;
+}
 .error_message .message a.back_button {
     margin-left: 13px;
     margin-top: -196px;

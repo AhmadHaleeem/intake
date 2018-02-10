@@ -37,7 +37,7 @@ $(function () {
     });
 
     // start Error Message
-    $('div.error_message').css('display', 'none');
+
     $("#register-form").click(function(){
 
         var isFormValid = true;

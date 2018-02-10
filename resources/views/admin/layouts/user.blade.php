@@ -14,8 +14,7 @@
                 <small>it all starts here</small>
             </h1>
             <ol class="breadcrumb">
-                <li><a href="#"><i class="fa fa-dashboard"></i> Admin Page</a></li>
-                <li><a href="#">Examples</a></li>
+                <li><a href="/dashboard"><i class="fa fa-dashboard"></i> Admin Page</a></li>
                 <li class="active">Admins</li>
             </ol>
         </section>
@@ -51,6 +50,7 @@
                                         <th>Name</th>
                                         <th>Email</th>
                                         <th>Admin</th>
+                                        <th>Date</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -60,6 +60,7 @@
                                         <td>{{ $user->name }}</td>
                                         <td>{{ $user->email }}</td>
                                         <td>{{ $user->admin === 1 ? 'Admin' : 'Guest' }}</td>
+                                        <td>{{ $user->created_at->diffForHumans() }}</td>
                                     </tr>
                                 @endforeach
                                 </tbody>
@@ -69,6 +70,7 @@
                                     <th>Name</th>
                                     <th>Email</th>
                                     <th>Admin</th>
+                                    <th>Date</th>
                                 </tr>
                                 </tfoot>
                             </table>

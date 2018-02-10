@@ -18,7 +18,8 @@
     <div class="container" style="">
 
         <div class="row">
-                <form method="post" action="<?php if (Request::path() == Request::path()) {echo Request::path() . '/store';} ?>" >
+
+                <form method="post" action="/@php if (Request::path() == Request::path()) {echo Request::path() . '/store';} @endphp" >
                     {{ csrf_field() }}
                     <div class="row upper">
 

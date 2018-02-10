@@ -29,7 +29,7 @@
                     </div>
                 </div>
                 <div class="box-body">
-                    Start creating your amazing application!
+                    Start browsing your survey!
                 </div>
                 <!-- /.box-body -->
                 <div class="box-footer">

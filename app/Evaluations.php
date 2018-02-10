@@ -13,7 +13,7 @@ class Evaluations extends Model
 
 
     protected $fillable = [
-      'products', 'goals', 'competitors', 'makeCompanyBeter', 'reasonMakeWebsite', 'oldBadWebsites', 'visitor'
+      'user_id','products', 'goals', 'competitors', 'makeCompanyBeter', 'reasonMakeWebsite', 'oldBadWebsites', 'visitor'
     ];
 }
 

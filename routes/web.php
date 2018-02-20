@@ -33,14 +33,11 @@ Route::post("/inhoud/store", 'InhoudsController@storeInhoud');
 Route::post("/techniek/store", 'TechnieksController@storeTechniek');
 Route::post("/hosting/store", 'HostingsController@storeHosting');
 
+//Export PDF File
+Route::get('/export/{id?}', 'PdfController@export')->name('export.pdf');
 // Admin Routes
 Route::get('/user', 'AdminController@index');
-
-Route::get('/bedrijf_evalu', 'AdminController@evalu');
-Route::get('/ontwer', 'AdminController@ontwer');
-Route::get('/inhouds', 'AdminController@inhoud');
-Route::get('/technieks', 'AdminController@techniek');
-Route::get('/host', 'AdminController@hosting');
+Route::get('/content/{id?}', 'AdminController@getContent');
 Route::get('/logout', 'AdminController@destroy');
 
 //Route::get('/deny', 'AdminController@deny');

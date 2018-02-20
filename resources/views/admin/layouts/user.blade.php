@@ -29,7 +29,7 @@
                     <div class="box-tools pull-right">
                         <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
                                 title="Collapse">
-                            <i class="fa fa-minus"></i></button>
+                            <i class="fa fa-bedrijf survey"></i></button>
                         <button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip"
                                 title="Remove">
                             <i class="fa fa-times"></i></button>
@@ -44,21 +44,23 @@
 
                         <div class="box-body table-responsive">
                             <table id="example1" class="table table-bordered table-striped">
-                                <thead>
-                                    <tr>
+                                <thead >
+                                    <tr >
                                         <th>ID</th>
                                         <th>Name</th>
                                         <th>Email</th>
+                                        <th>Report</th>
                                         <th>Admin</th>
                                         <th>Date</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                 @foreach($users as $user)
-                                    <tr>
+                                    <tr >
                                         <td>{{ $loop->index + 1 }}</td>
                                         <td>{{ $user->name }}</td>
                                         <td>{{ $user->email }}</td>
+                                        <td><a href="/content/{{ $user->id }}">Report</a></td>
                                         <td>{{ $user->admin === 1 ? 'Admin' : 'Guest' }}</td>
                                         <td>{{ $user->created_at->diffForHumans() }}</td>
                                     </tr>
@@ -69,6 +71,7 @@
                                     <th>ID</th>
                                     <th>Name</th>
                                     <th>Email</th>
+                                    <th>Report</th>
                                     <th>Admin</th>
                                     <th>Date</th>
                                 </tr>

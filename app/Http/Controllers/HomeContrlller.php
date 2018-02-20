@@ -2,6 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Hostings;
+use App\Inhouds;
+use App\Ontwerps;
+use App\Technieks;
 use Illuminate\Http\Request;
 use App\User;
 use App\Role;
@@ -28,16 +32,45 @@ class HomeContrlller extends Controller
 
     }
     public function ontwerp() {
-        return view('intake.ontwerp');
+        $id = Auth::user()->id;
+        $ontwerp = Ontwerps::where('user_id', $id)->first();
+        if ($ontwerp) {
+            return view('intake.ontwerp', compact('ontwerp'));
+        } else {
+            return view('intake.ontwerp', compact('ontwerp'));
+        }
+
     }
     public function inhoud() {
-        return view('intake.inhoud');
+        $id = Auth::user()->id;
+        $inhoud = Inhouds::where('user_id', $id)->first();
+        if ($inhoud) {
+            return view('intake.inhoud', compact('inhoud'));
+        } else {
+            return view('intake.inhoud', compact('inhoud'));
+        }
+
     }
     public function techniek() {
-        return view('intake.techniek');
+        $id = Auth::user()->id;
+        $techniek = Technieks::where('user_id', $id)->first();
+        if ($techniek) {
+            return view('intake.techniek', compact('techniek'));
+        } else {
+            return view('intake.techniek', compact('techniek'));
+        }
+
     }
     public function hosting() {
-        return view('intake.hosting');
+        $id = Auth::user()->id;
+        $hosting = Hostings::where('user_id', $id)->first();
+        if ($hosting) {
+            return view('intake.hosting', compact('hosting'));
+        } else {
+            return view('intake.hosting', compact('hosting'));
+        }
+
+
     }
 
     public function klaar() {

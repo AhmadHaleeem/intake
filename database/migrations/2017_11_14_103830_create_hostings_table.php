@@ -15,7 +15,8 @@ class CreateHostingsTable extends Migration
     {
         Schema::create('hostings', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('user_name')->nullable();
+            $table->integer('user_id')->unsigned()->index();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->text('domainName')->nullable();
             $table->text('hostingPackage')->nullable();
             $table->text('websiteSecure')->nullable();

@@ -10,7 +10,11 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
 
+
     <link rel='stylesheet' href='css/style.css'>
+
+
+
 
 </head>
 
@@ -73,6 +77,8 @@
     <script src='js/jquery-3.2.1.min.js'></script>
     <script src="js/js.js"></script>
     <script src='js/bootstrap.min.js'></script>
+    @section('js_links')
+    @show
 
 </body>
 

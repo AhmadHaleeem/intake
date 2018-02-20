@@ -9,6 +9,7 @@ use App\Ontwerps;
 use App\Inhouds;
 use App\Technieks;
 use App\Hostings;
+
 class AdminController extends Controller
 {
     public function __construct()
@@ -23,43 +24,21 @@ class AdminController extends Controller
         return view('admin.layouts.user', compact('users'));
     }
 
+    public function getContent($id) {
+        $user       = User::find($id);
+        $evals      = Evaluations::all();
+        $ontwerps   = Ontwerps::all();
+        $inhouds    = Inhouds::all();
+        $technieks  = Technieks::all();
+        $hostings   = Hostings::all();
+        return view('admin.layouts.file', compact('user', 'evals', 'ontwerps', 'inhouds', 'technieks', 'hostings'));
 
-
+    }
 
     public function login()
     {
         $users = User::all();
         return view('admin.layouts.user', compact('users'));
-    }
-
-    public function evalu()
-    {
-        $evaluations = Evaluations::all();
-        return view('admin.layouts.bedrijf', compact('evaluations'));
-    }
-
-    public function ontwer()
-    {
-        $ontwerps = Ontwerps::all();
-        return view('admin.layouts.ontwerps', compact('ontwerps'));
-    }
-
-    public function inhoud()
-    {
-        $inhouds = Inhouds::all();
-        return view('admin.layouts.inhoud', compact('inhouds'));
-    }
-
-    public function techniek()
-    {
-        $technieks = Technieks::all();
-        return view('admin.layouts.techniek', compact('technieks'));
-    }
-
-    public function hosting()
-    {
-        $hostings = Hostings::all();
-        return view('admin.layouts.hosting', compact('hostings'));
     }
 
     public function deny()
@@ -71,21 +50,6 @@ class AdminController extends Controller
         auth()->logout();
         return redirect('/login');
     }
-
-//    public function create() {
-//        return view('admin.layouts.login');
-//    }
-//
-//    public function store() {
-//        if (!auth()->attempt(request(['email', 'password']))) {
-//            return back()->withErrors([
-//                'Message' => 'Your Email or Password is Not Correct'
-//            ]);
-//        }
-//            return redirect('/home');
-//
-//
-//    }
 
 
 

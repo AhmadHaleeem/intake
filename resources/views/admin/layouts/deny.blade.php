@@ -1,1 +1,0 @@
-<h1 style="margin: 60px auto; text-align: center; color: #4a4a4a;">Sorry dat je niet geautoriseerd bent om toegang te krijgen !!</h1>

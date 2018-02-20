@@ -15,7 +15,8 @@ class CreateInhoudsTable extends Migration
     {
         Schema::create('inhouds', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('user_name');
+            $table->integer('user_id')->unsigned()->index();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->text('advices')->nullable();
             $table->text('newRegular')->nullable();
             $table->text('socialMedia')->nullable();

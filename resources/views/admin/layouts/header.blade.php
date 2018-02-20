@@ -19,34 +19,28 @@
                 <!-- User Account: style can be found in dropdown.less -->
                 <li class="dropdown user user-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <img src="admin/dist/img/user2.jpg" class="user-image" alt="User Image">
+                        <?php if (auth()->user()->name === 'Martijn') { ?>
+                        <img src="{{ url('admin/dist/img/user2.jpg') }}" class="user-image" alt="User Image">
+                        <?  } else { ?>
+                                <img src="{{ url('admin/dist/img/default.png') }}" class="user-image" alt="User Image">
+                          <?php  } ?>
                         <span class="hidden-xs">Beeldr Admin</span>
                     </a>
                     <ul class="dropdown-menu">
                         <!-- User image -->
                         <li class="user-header">
-                            <img src="admin/dist/img/user2.jpg" class="img-circle" alt="User Image">
-
+                            <?php if (auth()->user()->name === 'Martijn') { ?>
+                                <img src="{{ url('admin/dist/img/user2.jpg') }}" class="img-circle" alt="User Image">
+                            <?  } else { ?>
+                                <img src="{{ url('admin/dist/img/default.png') }}" class="img-circle" alt="User Image">
+                            <?php  } ?>
                             <p>
-                                Martijn - Web Developer
-                                <small>Member since Nov. 2012</small>
+                                {{ auth()->user()->name }} - Web Developer
+                                <small>Member since <b>{{ auth()->user()->created_at->diffForHumans() }}</b></small>
                             </p>
                         </li>
                         <!-- Menu Body -->
-                        <li class="user-body">
-                            <div class="row">
-                                <div class="col-xs-4 text-center">
-                                    <a href="#">Followers</a>
-                                </div>
-                                <div class="col-xs-4 text-center">
-                                    <a href="#">Sales</a>
-                                </div>
-                                <div class="col-xs-4 text-center">
-                                    <a href="#">Friends</a>
-                                </div>
-                            </div>
-                            <!-- /.row -->
-                        </li>
+
                         <!-- Menu Footer-->
                         <li class="user-footer">
                             <div class="pull-left">

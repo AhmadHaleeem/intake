@@ -13,33 +13,46 @@ class TechnieksController extends Controller
         $this->middleware('auth');
     }
     public function storeTechniek(Request $request) {
+        $techniek = Technieks::where('user_id', \auth()->user()->id)->first();
+        if (!$techniek) {
+            $technieks = new Technieks;
+            $technieks->user_id             = Auth::user()->id;
+            $technieks->linkTheEmail          = $request->linkTheEmail;
+            $technieks->newEmailAddress       = $request->newEmailAddress;
+            $technieks->offTheWebsite         = $request->offTheWebsite;
+            $technieks->budget                = $request->budget;
 
-//        $this->validate($request,  [
-//            'linkTheEmail'       => 'required',
-//            'newEmailAddress'    => 'required',
-//            'offTheWebsite'      => 'required',
-//            'budget'             => 'required',
-//            'siteStatistics'     => 'required',
-//            'timeOfSuccess'      => 'required',
-//
-//        ]);
+            if ( isset($request->technieks)) {
+                $all_technieks = implode(", ", $request->get('technieks'));
+                $technieks->technieks =   $all_technieks;
+            }
 
-        $technieks = new Technieks;
+            $technieks->siteStatistics        = $request->siteStatistics;
+            $technieks->timeOfSuccess         = $request->timeOfSuccess;
 
-        $technieks->user_name             = Auth::user()->name;
-        $technieks->linkTheEmail          = $request->linkTheEmail;
-        $technieks->newEmailAddress       = $request->newEmailAddress;
-        $technieks->offTheWebsite         = $request->offTheWebsite;
-        $technieks->budget                = $request->budget;
+            $technieks->save();
+            return redirect('/hosting');
+        } else {
+            $id = Auth::user()->id;
+            $technieks1 = Technieks::where('user_id', $id)->first();
+            $technieks1->user_id             = Auth::user()->id;
+            $technieks1->linkTheEmail          = $request->linkTheEmail;
+            $technieks1->newEmailAddress       = $request->newEmailAddress;
+            $technieks1->offTheWebsite         = $request->offTheWebsite;
+            $technieks1->budget                = $request->budget;
 
-        $technieks->selfDo                = $request->selfDo;
-        $technieks->beeldrTakesCMS        = $request->beeldrTakesCMS;
-        $technieks->beeldrOnlineMarketing = $request->beeldrOnlineMarketing;
-        $technieks->siteStatistics        = $request->siteStatistics;
-        $technieks->timeOfSuccess         = $request->timeOfSuccess;
+            if ( isset($request->technieks)) {
+                $all_technieks = implode(", ", $request->get('technieks'));
+                $technieks1->technieks =   $all_technieks;
+            }
+            $technieks1->siteStatistics        = $request->siteStatistics;
+            $technieks1->timeOfSuccess         = $request->timeOfSuccess;
 
-        $technieks->save();
-        return redirect('/hosting');
+            $technieks1->save();
+            return redirect('/hosting');
+        }
+
+
     }
 }
 

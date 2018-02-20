@@ -16,12 +16,12 @@
             </div>
             <div class="head1">
                 <div class="head">
-                    <span class="toggle-info pull-left"><i class="fa fa-minus"></i></span>
+                    <span class="toggle-info pull-left"><i class="fa fa-plus"></i></span>
                     <p>Welke Producten of diensten lever je aan klanten </p>
                 </div>
                 <div class="panel-body">
                     <div class="form-group">
-                        <textarea style="margin-bottom: -24px" class="form-control products" rows="2" id="comment" name="products">{{ $eval->products  }}</textarea>
+                        <textarea style="margin-bottom: -24px" class="form-control products" rows="2" id="comment1" name="products">{{ $eval->products  }}</textarea>
                     </div>
                 </div>
                 <hr>
@@ -29,11 +29,11 @@
 
             <div class="head1">
                 <div class="head">
-                    <span class="toggle-info pull-left"><i class="fa fa-minus"></i></span>Welke doelgroep(en) heb je?
+                    <span class="toggle-info pull-left"><i class="fa fa-plus"></i></span>Welke doelgroep(en) heb je?
                 </div>
                 <div class="panel-body">
                     <div class="form-group">
-                        <textarea style="margin-bottom: -24px" class="form-control" rows="2" id="comment" name="goal">{{  $eval->goal  }}</textarea>
+                        <textarea style="margin-bottom: -24px" class="form-control" rows="2" id="comment2" name="goal">{{  $eval->goal  }}</textarea>
                     </div>
                 </div>
                 <hr>
@@ -41,11 +41,11 @@
 
             <div class="head1">
                 <div class="head">
-                    <span class="toggle-info pull-left"><i class="fa fa-minus"></i></span>Wie zijn je concurrenten?
+                    <span class="toggle-info pull-left"><i class="fa fa-plus"></i></span>Wie zijn je concurrenten?
                 </div>
                 <div class="panel-body">
                     <div class="form-group">
-                        <textarea style="margin-bottom: -24px" class="form-control" rows="2" id="comment" name="competitors">{{  $eval->competitors  }}</textarea>
+                        <textarea style="margin-bottom: -24px" class="form-control" rows="2" id="comment3" name="competitors">{{  $eval->competitors  }}</textarea>
                     </div>
                 </div>
                 <hr>
@@ -53,11 +53,11 @@
 
             <div class="head1">
                 <div class="head">
-                    <span class="toggle-info pull-left"><i class="fa fa-minus"></i></span> Wat maakt jouw bedrijf beter dan je concurrenten (wat is je unique selling point USP)?
+                    <span class="toggle-info pull-left"><i class="fa fa-plus"></i></span> Wat maakt jouw bedrijf beter dan je concurrenten (wat is je unique selling point USP)?
                 </div>
                 <div class="panel-body">
                     <div class="form-group">
-                        <textarea style="margin-bottom: -24px" class="form-control" rows="2" id="comment" name="makeCompanyBeter">{{  $eval->makeCompanyBeter  }}</textarea>
+                        <textarea style="margin-bottom: -24px" class="form-control" rows="2" id="comment4" name="makeCompanyBeter">{{  $eval->makeCompanyBeter  }}</textarea>
                     </div>
                 </div>
                 <hr>
@@ -67,7 +67,7 @@
 
 
         <div class="container">
-            <div class="row">
+            <div style="margin-left: -12px" class="container">
                 <div class='con col-md-12'>
                     <h4>Wat is het doel van de website?</h4>
                     <div class="checkbox">
@@ -93,7 +93,7 @@
                     </div>
                     <div class="checkbox ">
                         <label style="margin-bottom: 15px" class="anders"><input type="checkbox" value="" name="anders">....................</label>
-                        <textarea style="display: none;margin-top: 10px;max-width: 610px;height: 44px;"  class="form-control open_anders" rows="2" id="comment" name="anders">{{  $eval->anders  }}</textarea>
+                        <textarea style="display: none;margin-top: 10px;max-width: 610px;height: 44px;"  class="form-control open_anders" rows="2" id="comment5" name="anders">{{  $eval->anders  }}</textarea>
                     </div>
                 </div>
             </div>
@@ -102,11 +102,11 @@
         <div class="container">
             <div class="head2">
                 <div class="head">
-                    <span class="toggle-info pull-left"><i class="fa fa-minus"></i></span>Wat is de aanleiding dat je nu een nieuwe website wilt?
+                    <span class="toggle-info pull-left"><i class="fa fa-plus"></i></span>Wat is de aanleiding dat je nu een nieuwe website wilt?
                 </div>
                 <div class="panel-body">
                     <div class="form-group">
-                        <textarea style="margin-bottom: -24px" class="form-control" rows="2" id="comment" name="reasonMakeWebsite">{{  $eval->reasonMakeWebsite  }}</textarea>
+                        <textarea style="margin-bottom: -24px" class="form-control" rows="2" id="comment6" name="reasonMakeWebsite">{{  $eval->reasonMakeWebsite  }}</textarea>
                     </div>
                 </div>
                 <hr>
@@ -114,11 +114,11 @@
 
             <div class="head1">
                 <div class="head">
-                    <span class="toggle-info pull-left"><i class="fa fa-minus"></i></span>Als er een oude website bestaat, wat was er goed en slecht aan?
+                    <span class="toggle-info pull-left"><i class="fa fa-plus"></i></span>Als er een oude website bestaat, wat was er goed en slecht aan?
                 </div>
                 <div class="panel-body">
                     <div class="form-group">
-                        <textarea style="margin-bottom: -24px" class="form-control" rows="2" id="comment" name="oldBadWebsites">{{  $eval->oldBadWebsites  }}</textarea>
+                        <textarea style="margin-bottom: -24px" class="form-control" rows="2" id="comment7" name="oldBadWebsites">{{  $eval->oldBadWebsites  }}</textarea>
                     </div>
                 </div>
                 <hr>
@@ -126,12 +126,12 @@
 
             <div class="head1">
                 <div class="head">
-                    <span class="toggle-info pull-left"><i class="fa fa-minus"></i></span>Wat wil je dat een bezoeker doet wanneer hij/zij op je site belandt? wat heft hij/zij eraan? Wat is de frustratie of reden die een bezoeker heeft om naar jouw website to gaan?
+                    <span class="toggle-info pull-left"><i class="fa fa-plus"></i></span>Wat wil je dat een bezoeker doet wanneer hij/zij op je site belandt? wat heft hij/zij eraan? Wat is de frustratie of reden die een bezoeker heeft om naar jouw website to gaan?
                 </div>
 
                 <div class="panel-body">
                     <div class="form-group">
-                        <textarea style="margin-bottom: -24px" class="form-control" rows="2" id="comment" name="visitor">{{  $eval->visitor  }}</textarea>
+                        <textarea style="margin-bottom: -24px" class="form-control" rows="2" id="comment8" name="visitor">{{  $eval->visitor  }}</textarea>
                     </div>
                 </div>
                 <hr>
@@ -168,7 +168,7 @@
             </div>
             <div class="head1">
                 <div class="head">
-                    <span class="toggle-info pull-left"><i class="fa fa-minus"></i></span>
+                    <span class="toggle-info pull-left"><i class="fa fa-plus"></i></span>
                     <p>Welke Producten of diensten lever je aan klanten </p>
                 </div>
                 <div class="panel-body">
@@ -181,7 +181,7 @@
 
             <div class="head1">
                 <div class="head">
-                    <span class="toggle-info pull-left"><i class="fa fa-minus"></i></span>Welke doelgroep(en) heb je?
+                    <span class="toggle-info pull-left"><i class="fa fa-plus"></i></span>Welke doelgroep(en) heb je?
                 </div>
                 <div class="panel-body">
                     <div class="form-group">
@@ -193,7 +193,7 @@
 
             <div class="head1">
                 <div class="head">
-                    <span class="toggle-info pull-left"><i class="fa fa-minus"></i></span>Wie zijn je concurrenten?
+                    <span class="toggle-info pull-left"><i class="fa fa-plus"></i></span>Wie zijn je concurrenten?
                 </div>
                 <div class="panel-body">
                     <div class="form-group">
@@ -205,7 +205,7 @@
 
             <div class="head1">
                 <div class="head">
-                    <span class="toggle-info pull-left"><i class="fa fa-minus"></i></span> Wat maakt jouw bedrijf beter dan je concurrenten (wat is je unique selling point USP)?
+                    <span class="toggle-info pull-left"><i class="fa fa-plus"></i></span> Wat maakt jouw bedrijf beter dan je concurrenten (wat is je unique selling point USP)?
                 </div>
                 <div class="panel-body">
                     <div class="form-group">
@@ -219,9 +219,9 @@
 
 
         <div class="container">
-            <div class="row">
+            <div style="margin-left: -12px" class="container">
                 <div class='con col-md-12'>
-                    <h4>Wat is het doel van de website?</h4>
+                    <h4>Wat is het doel van de website?</h4>s
                     <div class="checkbox">
                         <label><input type="checkbox"  value="Online presenteren van je bedrijf" name="goals[]" >Online presenteren van je bedrijf</label>
                     </div>
@@ -254,7 +254,7 @@
         <div class="container">
             <div class="head2">
                 <div class="head">
-                    <span class="toggle-info pull-left"><i class="fa fa-minus"></i></span>Wat is de aanleiding dat je nu een nieuwe website wilt?
+                    <span class="toggle-info pull-left"><i class="fa fa-plus"></i></span>Wat is de aanleiding dat je nu een nieuwe website wilt?
                 </div>
                 <div class="panel-body">
                     <div class="form-group">
@@ -266,7 +266,7 @@
 
             <div class="head1">
                 <div class="head">
-                    <span class="toggle-info pull-left"><i class="fa fa-minus"></i></span>Als er een oude website bestaat, wat was er goed en slecht aan?
+                    <span class="toggle-info pull-left"><i class="fa fa-plus"></i></span>Als er een oude website bestaat, wat was er goed en slecht aan?
                 </div>
                 <div class="panel-body">
                     <div class="form-group">
@@ -278,7 +278,7 @@
 
             <div class="head1">
                 <div class="head">
-                    <span class="toggle-info pull-left"><i class="fa fa-minus"></i></span>Wat wil je dat een bezoeker doet wanneer hij/zij op je site belandt? wat heft hij/zij eraan? Wat is de frustratie of reden die een bezoeker heeft om naar jouw website to gaan?
+                    <span class="toggle-info pull-left"><i class="fa fa-plus"></i></span>Wat wil je dat een bezoeker doet wanneer hij/zij op je site belandt? wat heft hij/zij eraan? Wat is de frustratie of reden die een bezoeker heeft om naar jouw website to gaan?
                 </div>
 
                 <div class="panel-body">
